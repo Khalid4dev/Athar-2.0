@@ -10,13 +10,6 @@ const config = {
 	],
   prefix: "",
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
     extend: {
       colors: {
         "primary-blue": "#4AA4DB",
@@ -56,6 +49,10 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+      },
+      fontFamily: {
+        dmsans: ["DM Sans", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

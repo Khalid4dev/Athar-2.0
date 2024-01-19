@@ -266,9 +266,74 @@ const ParticipatePage = () => {
                     </form>
                 </div>
             </section>
-            <section className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-6 mx-auto max-w-screen-xl">
-                <h1>Actions en cours</h1>
+            <section className="pt-12 pb-12">
+                <h1 className="text-4xl text-center font-bold mb-4">Actions en cours</h1>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 pt-6 mx-auto max-w-screen-xl">
+                    <div className="grid grid-rows-2 pr-4 pl-4">
+                        <div>
+                            <Image src={helpImage} alt="Devenir Bénévole" className="object-cover w-full h-72" />
+                        </div>
+                        <div className=" flex flex-col items-center gap-4 relative w-full">
+                            <div className="flex flex-col gap-2 relative w-full">
+                                <div className="relative text-xl font-bold pt-4 text-black">Let’s together provide them a healthy food</div>
+                                <p className="relative text-base font-normal text-primary-grey">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus incidunt ullam doloribus illo nobis? Incidunt atque facilis quibusdam odit perspiciatis velit alias nesciunt vero quod, obcaecati soluta ad deleniti harum.</p>
+                            </div>
+                            <div className="flex items-center justify-between relative w-full">
+                                <div className="flex items-center gap-2 relative bg-gray-300 rounded-full p-2">
+                                    <div className="relative font-normal text-black text-sm">15 Dec 22</div>
+                                </div>
+                                <a className="flex items-center justify-end border p-3 text-white rounded bg-secondary-red" href="#">
+                                    Read more
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="bg-gray-200 grid grid-rows-1 sm:grid-rows-3 gap-2 pl-8 pr-8 pt-4 pb-4">
+                        <div className="flex items-center">
+                            <div>
+                                <Image src={helpImage} alt="Devenir Bénévole" className="object-fill w-96 h-full" />
+                            </div>
+                            <div className="flex flex-col items-start gap-4 pl-2 relative w-full">
+                                <div className="relative text-xl font-bold text-black">Let’s together provide them a healthy food</div>
+                                <div className="flex items-center justify-between w-full">
+                                        <div className="relative font-normal text-primary-grey text-sm">15 Dec 22</div>
+                                    <a className="flex items-center justify-end p-3 text-secondary-red" href="#">
+                                        Read more
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex items-center">
+                            <div>
+                                <Image src={helpImage} alt="Devenir Bénévole" className="object-fill w-96 h-full" />
+                            </div>
+                            <div className="flex flex-col items-start gap-4 pl-2 relative w-full">
+                                <div className="relative text-xl font-bold text-black">Let’s together provide them a healthy food</div>
+                                <div className="flex items-center justify-between w-full">
+                                <div className="relative font-normal text-primary-grey text-sm">15 Dec 22</div>
+                                    <a className="flex items-center justify-end p-3 text-secondary-red" href="#">
+                                        Read more
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex items-center">
+                            <div>
+                                <Image src={helpImage} alt="Devenir Bénévole" className="object-fill w-96 h-full" />
+                            </div>
+                            <div className="flex flex-col items-start gap-4 pl-2 relative w-full">
+                                <div className="relative text-xl font-bold text-black">Let’s together provide them a healthy food</div>
+                                <div className="flex items-center justify-between w-full">
+                                <div className="relative font-normal text-primary-grey text-sm">15 Dec 22</div>
+                                    <a className="flex items-center justify-end p-3 text-secondary-red" href="#">
+                                        Read more
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                </div>
             </section>
         </>
     );
