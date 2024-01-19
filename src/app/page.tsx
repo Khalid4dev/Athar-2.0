@@ -1,18 +1,24 @@
 import Image from "next/image";
-import Navbar from "../components/navbar"; // Import the 'Navbar' component
+import HeroSection from "../components/HeroSection";
+import Navbar from "../components/navbar";
 import Footer from "../components/footer";
+import NewsSection from '../components/NewsSection'
+import SponsorsSection from "../components/SponsorsSection";
+import AboutUsSection from "../components/AboutUsSection";
+import AboutUsPage from "./AboutUsPage";
+import PageTitle from "../components/PageTitle";
+import ParticipatePage from "./ParticipatePage";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-between">
-      <Navbar /> {/* Use the 'Navbar' component */}
-      {/* Rest of the code */}
-      {/* <Hero />
+    <main>
+      <Navbar />
+      {/* <HeroSection />
       <AboutUsSection />
       <NewsSection />
       <SponsorsSection /> */}
       {/* <AboutUsPage/> */}
-      {/* <ParticipatePage/> */}
+      <ParticipatePage/>
       <Footer />
     </main>
   );

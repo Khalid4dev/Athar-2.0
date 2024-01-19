@@ -1,5 +1,6 @@
 import React from 'react';
 import sponsorImage from '../assets/images/1.webp';
+import Image from 'next/image';
 
 interface SponsorsSectionProps {
     className?: string;
@@ -15,7 +16,7 @@ const SponsorsSection: React.FC<SponsorsSectionProps> = ({ className }) => {
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
                     {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((index) => (
                         <div key={index}>
-                            <img src={sponsorImage} alt={`Sponsor ${index + 1}`} className="h-15 w-auto mx-auto" />
+                            <Image src={sponsorImage} alt={`Sponsor ${index + 1}`} className="h-15 w-auto mx-auto" />
                         </div>
                     ))}
                 </div>

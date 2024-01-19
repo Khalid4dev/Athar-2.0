@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className=" bg-blue-500 text-black text-center p-8">
+    <footer className=" bg-primary-blue text-white text-center p-8">
       <div className="grid sm:grid-cols-2 grid-cols-1 gap-8 mx-auto max-w-screen-xl">
         <div className="mb-4">
           <div className="flex flex-col items-center">
@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
               Your association's description goes here. Provide a brief overview
               of your mission and goals.
             </p>
-            <button className="bg-white text-primary-blue px-4 py-2 rounded-full hover:bg-cyan-300">
+            <button className="bg-white text-black text-primary-blue px-4 py-2 rounded-full hover:bg-cyan-300">
               Join Us
             </button>
           </div>
@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
             />
             <button
               type="submit"
-              className="bg-white text-primary-blue px-4 py-2 rounded-full hover:bg-cyan-300"
+              className="bg-white text-black text-primary-blue px-4 py-2 rounded-full hover:bg-cyan-300"
             >
               Subscribe
             </button>

@@ -1,5 +1,6 @@
 import React from "react";
 import heroImage from "../assets/images/heroSectionImage.jpg";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 const HeroSection: React.FC = () => {
@@ -8,7 +9,7 @@ const HeroSection: React.FC = () => {
       id="hero-section"
       className="relative w-full h-screen flex justify-center items-center text-center overflow-hidden"
     >
-      <img
+      <Image
         src={heroImage}
         alt="Hero Image"
         className="absolute w-full h-full -z-50 object-cover"

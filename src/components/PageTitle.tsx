@@ -1,4 +1,5 @@
 import TitleImage from "../assets/images/title_background.jpeg";
+import Image from "next/image";
 
 type PageTitleProps = {
     title: string;
@@ -7,7 +8,7 @@ type PageTitleProps = {
 const PageTitle = (prop: PageTitleProps) => {
     return (
         <section id="hero-section" className="relative w-full h-96 text-center">
-            <img
+            <Image
                 src={TitleImage}
                 alt="Hero Image"
                 className="absolute w-full h-full -z-50 object-cover"

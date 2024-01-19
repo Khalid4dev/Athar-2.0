@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import aboutusimage from 'images/aboutus.jpg';
+import aboutusimage from '../assets/images/aboutus.jpg';
 const AboutUsSection: React.FC = () => {
   return (
     <div className="flex justify-center p-8 bg-gray-200">

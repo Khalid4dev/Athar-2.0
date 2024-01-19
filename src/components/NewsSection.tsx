@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from './Card';
+import Card from './card';
 import cardimage from '../assets/images/Cardimage.jpeg';
 
 const NewsSection: React.FC = () => {
@@ -12,7 +12,7 @@ const NewsSection: React.FC = () => {
         {[1, 2, 3].map((index) => (
           <div key={index} className="mb-8">
             <Card
-              cardImage={cardimage}
+              cardImage={cardimage.src}
               headline="Dynamic Headline"
               description="Dynamic description goes here. Provide a brief overview of your content."
               date="20 Dec. 23"
