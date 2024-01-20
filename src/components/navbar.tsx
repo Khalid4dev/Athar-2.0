@@ -116,7 +116,8 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
                     )}
                   </Link>
                   {item.children && (
-                    <div className="absolute mt-0.5 left-0 w-48 rounded-md shadow-lg bg-blue-200 backdrop-blur ring-1 ring-black ring-opacity-5 overflow-hidden z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200 delay-150">
+                    <div className="absolute left-0 w-48 rounded-md shadow-lg bg-blue-200 backdrop-blur ring-1 ring-black ring-opacity-5 overflow-hidden z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200 delay-150 transition-delay-600">
+                      {" "}
                       {item.children.map((child) => (
                         <Link
                           className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-400 hover:text-white"
