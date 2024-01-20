@@ -3,7 +3,7 @@ import Image from 'next/image';
 import aboutusimage from '../assets/images/aboutus.jpg';
 const AboutUsSection: React.FC = () => {
   return (
-    <div className="flex justify-center p-8 bg-gray-200">
+    <div className="flex justify-center p-8 bg-blue-50">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-screen-xl">
         <div>
           <div className="mb-8">

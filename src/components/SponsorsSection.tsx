@@ -8,7 +8,7 @@ interface SponsorsSectionProps {
 
 const SponsorsSection: React.FC<SponsorsSectionProps> = ({ className }) => {
     return (
-        <section className={`p-8 bg-gray-200 ${className}`}>
+        <section className={`p-8 bg-blue-50 ${className}`}>
             <div className="container grid grid-cols-2 gap-8 max-w-screen-xl px-0">
                 <div className="text-center flex flex-col justify-center h-full">
                     <h2 className="text-2xl font-bold mb-4">Our Sponsors</h2>

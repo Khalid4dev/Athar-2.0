@@ -1,12 +1,21 @@
 "use client";
 import React, { useState } from 'react';
 import Image from 'next/image';
-const Footer: React.FC = () => {
-  const [email, setEmail] = useState<string>('');
+interface NavItem {
+  name: string;
+  href: string;
+}
+
+interface FooterProps {
+  navItems: NavItem[];
+}
+
+const Footer: React.FC<FooterProps> = ({ navItems }) => {
+  const [email, setEmail] = useState<string>("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Email submitted:', email);
+    console.log("Email submitted:", email);
   };
 
   return (
@@ -26,16 +35,15 @@ const Footer: React.FC = () => {
               of your mission and goals.
             </p>
             <button className="bg-white text-primary-blue px-4 py-2 rounded-full hover:bg-cyan-300">
-              Join Us
+               Rejoignez-nous
             </button>
           </div>
         </div>
 
         <div className="mb-4">
-          <h2 className="text-2xl font-bold mb-4">Subscribe to Newsletters</h2>
+            <h2 className="text-2xl font-bold mb-4">Abonnez-vous à nos Newsletters</h2>
           <p className="mt-2 text-justify pb-2">
-            Get the latest news and most urgent calls to action by signing up to
-            receive email alerts.
+            Recevez les dernières actualités et les appels les plus urgents en vous inscrivant pour recevoir des alertes par e-mail.
           </p>
           <form onSubmit={handleSubmit} className="flex flex-col items-center">
             <input
@@ -51,7 +59,7 @@ const Footer: React.FC = () => {
               type="submit"
               className="bg-white  text-primary-blue px-4 py-2 rounded-full hover:bg-cyan-300"
             >
-              Subscribe
+              S'abonner
             </button>
           </form>
         </div>
@@ -60,16 +68,13 @@ const Footer: React.FC = () => {
       <div className="grid sm:grid-cols-2 grid-cols-1 gap-8 mx-auto max-w-screen-xl">
         <div className="mb-4">
           <ul className="flex flex-col space-y-2">
-            <li>
-              <a href="#" className="text-white hover:text-gray-200">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-white hover:text-gray-200">
-                About
-              </a>
-            </li>
+            {navItems.map((item) => (
+              <li key={item.name}>
+                <a href={item.href} className="text-white hover:text-gray-600">
+                  {item.name}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="mb-4 flex justify-center">
