@@ -4,12 +4,12 @@ import PageTitle from "../../components/PageTitle";
 import pfp from "../../assets/images/pfp.jpg";
 import kidsImage from "../../assets/images/kids.jpg";
 import Image from "next/image";
-
+import Link from "next/link";
 const AboutUsPage = () => {
   return (
     <>
       <PageTitle title="A propos" />
-      <section className="bg-white p-8">
+      <section id="WhoUs" className="bg-white p-8">
         <div className="flex justify-center p-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 max-w-screen-xl">
             <div className="p-5  order-1 sm:order-1 flex flex-col justify-center items-center">
@@ -42,7 +42,7 @@ const AboutUsPage = () => {
                 alt=""
               />
             </div>
-            <div className="p-5 flex flex-col justify-center items-center order-3 sm:order-4">
+            <div id="Mission" className="p-5 flex flex-col justify-center items-center order-3 sm:order-4">
               <div className="mb-8">
                 <div className="text-2xl font-bold">Notre Missions</div>
               </div>
@@ -111,7 +111,7 @@ const AboutUsPage = () => {
           </div>
         </div>
       </section>
-      <section>
+      <section id="TeamMembers">
         <h2 className="text-center text-3xl text-black font-bold mb-8">
           Notre Équipe
         </h2>
@@ -131,9 +131,13 @@ const AboutUsPage = () => {
       </section>
 
       <div className="text-center mt-8">
-        <button className="bg-cyan-300 text-black px-4 py-2 hover:bg-cyan-100 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring focus:border-cyan-500">
-          Voir plus
-        </button>
+        <Link
+          href="/TeamMembers"
+        >
+          <button className="bg-cyan-300 text-black px-4 py-2 hover:bg-cyan-100 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring focus:border-cyan-500">
+            Voir plus
+          </button>
+        </Link>
       </div>
       {/* <section>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 py-20 mx-auto max-w-screen-xl">

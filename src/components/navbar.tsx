@@ -5,10 +5,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import Link from "next/link";
-
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 interface NavItem {
   name: string;
   href: string;
+  children?: NavItem[];
 }
 
 interface NavbarProps {
@@ -38,15 +40,47 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
             ☰
           </button>
           <div className="hidden md:flex items-center space-x-4">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-white hover:text-blue-500"
-              >
-                {item.name}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+
+              return (
+                <div
+                  className="relative group"
+                  key={item.name}
+                  onMouseEnter={() => setIsDropdownVisible(true)}
+                  onMouseLeave={() => setIsDropdownVisible(false)}
+                >
+                  <Link
+                    className="text-white hover:text-blue-500"
+                    href={item.href}
+                  >
+                    {item.name}
+                    {item.children && (
+                      <FontAwesomeIcon
+                        icon={
+                          isDropdownVisible ? faChevronDown : faChevronRight
+                        }
+                        className="ml-1"
+                        style={{ fontSize: "0.75rem" }}
+                      />
+                    )}
+                  </Link>
+                  {item.children && (
+                    <div className="absolute mt-0.5 left-0 w-48 rounded-md shadow-lg bg-blue-200 backdrop-blur ring-1 ring-black ring-opacity-5 overflow-hidden z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200 delay-150">
+                      {item.children.map((child) => (
+                        <Link
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-400 hover:text-white"
+                          href={child.href}
+                          key={child.name}
+                        >
+                          {child.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
             <div className="flex items-center space-x-2">
               <Button
                 variant="secondary"
@@ -54,10 +88,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
               >
                 Faire un Don
               </Button>
-              <Link 
-                key="Rejoignez-nous"
-                href="/participer#JoinUs"
-              >
+              <Link key="Rejoignez-nous" href="/participer#JoinUs">
                 <Button
                   variant="outline"
                   className="hover:bg-blue-300 bg-white hover:border-blue-300  text-blue-400 "

@@ -17,9 +17,24 @@ export default function RootLayout({
 }>) {
   const navItems = [
     { name: "Accueil", href: "/" },
-    { name: "À Propos", href: "/AboutUs" },
-    { name: "Actualités", href: "/Participate" },
-    { name: "Boutique", href: "/TeamMembers" },
+    {
+      name: "À Propos",
+      href: "/AboutUs",
+      children: [
+        { name: "Qui sommes-nous?", href: "/AboutUs#WhoUs" },
+        { name: "Mission et valeurs", href: "/AboutUs#Mission" },
+        { name: "Notre équipe", href: "/TeamMembers" },
+      ],
+    },
+    {
+      name: "Actualités",
+      href: "/News",
+      children: [
+        { name: "sub item 1", href: "/subitem1" },
+        { name: "sub item 2", href: "/subitem2" },
+      ],
+    },
+    { name: "Boutique", href: "/Boutique" },
   ];
 
   return (
