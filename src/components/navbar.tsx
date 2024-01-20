@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import Link from "next/link";
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 interface NavItem {
   name: string;
@@ -13,14 +13,63 @@ interface NavItem {
   children?: NavItem[];
 }
 
-
 interface NavbarProps {
   navItems: NavItem[];
 }
 
+
+// ...
+
+function MenuItem({ item }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+
+  return (
+    <div
+      className="relative group"
+      key={item.name}
+      onMouseEnter={() => setIsDropdownVisible(true)}
+      onMouseLeave={() => setIsDropdownVisible(false)}
+    >
+      <Link
+        key={item.name}
+        href={item.href}
+        className="flex items-center text-white hover:text-blue-200"
+        onClick={(e) => {
+          if (item.children) {
+            e.preventDefault();
+            setIsOpen(!isOpen);
+          }
+        }}
+      >
+        {item.name}
+        {item.children && (
+          <FontAwesomeIcon
+            icon={isDropdownVisible ? faChevronDown : faChevronRight}
+            className="ml-1"
+            style={{ fontSize: "0.75rem" }}
+          />
+        )}
+      </Link>
+      {isOpen && item.children && item.children.length > 0 && (
+        <div className="submenu bg-blue-300 mt-2 rounded-md shadow-lg">
+          {item.children.map((childItem) => (
+            <Link
+              key={childItem.name}
+              href={childItem.href}
+              className="block px-4 py-2 text-white hover:bg-blue-400 hover:text-white text-sm"
+            >
+              {childItem.name}
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
   const [isOpen, setIsOpen] = useState(false);
-   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState({});
   return (
     <>
       <div className="absolute top-4 z-10 w-full flex items-center justify-center px-4 md:px-8 lg:px-16">
@@ -111,32 +160,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
           </button>
           <div className="flex flex-col items-center space-y-4 mt-16">
             {navItems.map((item) => (
-              <div className="relative group">
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-white hover:text-blue-200"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setDropdownOpen((prev) => !prev);
-                  }}
-                >
-                  {item.name}
-                </a>
-                {item.children && dropdownOpen && (
-                  <div className="absolute left-0 w-64 p-2 mt-2 space-y-2 text-gray-800 bg-white rounded-lg shadow-md">
-                    {item.children.map((child) => (
-                      <a
-                        key={child.name}
-                        href={child.href}
-                        className="block px-2 py-1 text-sm hover:bg-blue-500 hover:text-white"
-                      >
-                        {child.name}
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </div>
+              <MenuItem item={item} />
             ))}
             <Button
               variant="secondary"
