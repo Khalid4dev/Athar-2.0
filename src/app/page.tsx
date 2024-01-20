@@ -2,26 +2,21 @@ import Image from "next/image";
 import HeroSection from "../components/HeroSection";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import NewsSection from '../components/NewsSection'
+import NewsSection from "../components/NewsSection";
 import SponsorsSection from "../components/SponsorsSection";
 import AboutUsSection from "../components/AboutUsSection";
-import AboutUsPage from "./AboutUsPage";
+import AboutUsPage from "./AboutUs/page";
 import PageTitle from "../components/PageTitle";
-import ParticipatePage from "./ParticipatePage";
+import ParticipatePage from "./participer/page";
 import TeamMembersPage from "./TeamMembersPage";
 
 export default function Home() {
   return (
     <main>
-      <Navbar />
-      {/* <HeroSection />
+      <HeroSection />
       <AboutUsSection />
       <NewsSection />
-      <SponsorsSection /> */}
-      {/* <AboutUsPage/> */}
-      {/* <ParticipatePage/> */}
-      <TeamMembersPage/>
-      <Footer />
+      <SponsorsSection />
     </main>
   );
 }

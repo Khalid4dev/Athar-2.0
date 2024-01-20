@@ -1,15 +1,25 @@
 import React, { ReactNode } from "react";
-import NavBar from "./navbar"; // Assuming you have a NavBar component
-import Footer from "./footer"; // Assuming you have a Footer component
+import NavBar from "./navbar"; // adjust the path as needed
+import Footer from "./footer"; // adjust the path as needed
+
 interface LayoutProps {
   children: ReactNode;
 }
+
 const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const navItems = [
+    { name: "Accueil", href: "/accueil" },
+    { name: "À Propos", href: "/à-propos" },
+    { name: "Actualités", href: "/actualites" },
+    { name: "Boutique", href: "/boutique" },
+    // Add more items as needed
+  ];
+
   return (
     <>
-      <NavBar />
+      <NavBar navItems={navItems} />
       {children}
-      <Footer />
+      <Footer navItems={navItems} />
     </>
   );
 };
