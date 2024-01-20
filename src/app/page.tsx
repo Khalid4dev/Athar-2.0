@@ -8,6 +8,7 @@ import AboutUsSection from "../components/AboutUsSection";
 import AboutUsPage from "./AboutUsPage";
 import PageTitle from "../components/PageTitle";
 import ParticipatePage from "./ParticipatePage";
+import TeamMembersPage from "./TeamMembersPage";
 
 export default function Home() {
   return (
@@ -18,7 +19,8 @@ export default function Home() {
       <NewsSection />
       <SponsorsSection /> */}
       {/* <AboutUsPage/> */}
-      <ParticipatePage/>
+      {/* <ParticipatePage/> */}
+      <TeamMembersPage/>
       <Footer />
     </main>
   );
