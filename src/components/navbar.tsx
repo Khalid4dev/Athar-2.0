@@ -13,13 +13,14 @@ interface NavItem {
   children?: NavItem[];
 }
 
+
 interface NavbarProps {
   navItems: NavItem[];
 }
 
 const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
   const [isOpen, setIsOpen] = useState(false);
-
+   const [dropdownOpen, setDropdownOpen] = useState(false);
   return (
     <>
       <div className="absolute top-4 z-10 w-full flex items-center justify-center px-4 md:px-8 lg:px-16">
@@ -110,13 +111,32 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
           </button>
           <div className="flex flex-col items-center space-y-4 mt-16">
             {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-white hover:text-blue-200"
-              >
-                {item.name}
-              </a>
+              <div className="relative group">
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-white hover:text-blue-200"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setDropdownOpen((prev) => !prev);
+                  }}
+                >
+                  {item.name}
+                </a>
+                {item.children && dropdownOpen && (
+                  <div className="absolute left-0 w-64 p-2 mt-2 space-y-2 text-gray-800 bg-white rounded-lg shadow-md">
+                    {item.children.map((child) => (
+                      <a
+                        key={child.name}
+                        href={child.href}
+                        className="block px-2 py-1 text-sm hover:bg-blue-500 hover:text-white"
+                      >
+                        {child.name}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
             <Button
               variant="secondary"
