@@ -23,7 +23,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
    const [dropdownOpen, setDropdownOpen] = useState(false);
   return (
     <>
-      <div className="absolute top-4 z-10 w-full flex items-center justify-center px-4 md:px-8 lg:px-16">
+      <div className="top-4 z-10 w-full flex items-center justify-center px-4 md:px-8 lg:px-16 fixed">
         <nav className="flex items-center justify-between p-4 bg-blue-200 backdrop-blur bg-opacity-60 text-white rounded-3xl mx-auto w-full max-w-screen-xl  ">
           <div className="flex items-center flex-shrink-0">
             <Image

@@ -29,10 +29,6 @@ export default function RootLayout({
     {
       name: "Actualités",
       href: "/News",
-      children: [
-        { name: "sub item 1", href: "/subitem1" },
-        { name: "sub item 2", href: "/subitem2" },
-      ],
     },
     { name: "Boutique", href: "/Boutique" },
   ];

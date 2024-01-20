@@ -19,7 +19,7 @@ const Footer: React.FC<FooterProps> = ({ navItems }) => {
   };
 
   return (
-    <footer className=" bg-primary-blue text-white text-center p-8">
+    <footer className=" bg-primary-blue text-white text-center p-8 bottom-0 w-full">
       <div className="grid sm:grid-cols-2 grid-cols-1 gap-8 mx-auto max-w-screen-xl">
         <div className="mb-4">
           <div className="flex flex-col items-center">
