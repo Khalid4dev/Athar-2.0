@@ -18,8 +18,8 @@ export default function RootLayout({
   const navItems = [
     { name: "Accueil", href: "/" },
     { name: "À Propos", href: "/AboutUs" },
-    { name: "Actualités", href: "/participer" },
-    { name: "Boutique", href: "/boutique" },
+    { name: "Actualités", href: "/Participate" },
+    { name: "Boutique", href: "/TeamMembers" },
   ];
 
   return (

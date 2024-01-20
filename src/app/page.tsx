@@ -7,7 +7,7 @@ import SponsorsSection from "../components/SponsorsSection";
 import AboutUsSection from "../components/AboutUsSection";
 import AboutUsPage from "./AboutUs/page";
 import PageTitle from "../components/PageTitle";
-import ParticipatePage from "./participer/page";
+import ParticipatePage from "./Participate/page";
 import TeamMembersPage from "./TeamMembersPage";
 
 export default function Home() {
