@@ -51,7 +51,7 @@ const config = {
         },
       },
       fontFamily: {
-        dmsans: ["DM Sans", "sans-serif"],
+        Arabota: ["Arabota", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
       },
       borderRadius: {

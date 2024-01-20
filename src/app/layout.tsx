@@ -20,7 +20,6 @@ export default function RootLayout({
     { name: "À Propos", href: "/AboutUs" },
     { name: "Actualités", href: "/participer" },
     { name: "Boutique", href: "/boutique" },
-    // Add more items as needed
   ];
 
   return (

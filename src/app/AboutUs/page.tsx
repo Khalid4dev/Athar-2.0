@@ -1,8 +1,8 @@
-import aboutusimage from "../assets/images/aboutus.jpg";
+import aboutusimage from "../../assets/images/aboutus.jpg";
 import MemberCard from "../../components/MemberCard";
 import PageTitle from "../../components/PageTitle";
-import pfp from "../assets/images/pfp.jpg";
-import kidsImage from "../assets/images/kids.jpg";
+import pfp from "../../assets/images/pfp.jpg";
+import kidsImage from "../../assets/images/kids.jpg";
 import Image from "next/image";
 
 const AboutUsPage = () => {

@@ -13,8 +13,8 @@ import TeamMembersPage from "./TeamMembersPage";
 export default function Home() {
   return (
     <main>
-    <HeroSection />
-     <AboutUsSection />
+      <HeroSection />
+      <AboutUsSection />
       <NewsSection /> 
       <SponsorsSection />
     </main>

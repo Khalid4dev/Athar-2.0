@@ -18,7 +18,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
 import helpImage from "src/assets/images/help.jpg";
-import Layout from "@/components/Layout";
+
 
 const ParticipatePage = () => {
   const [formData, setFormData] = useState({
