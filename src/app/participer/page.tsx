@@ -139,7 +139,7 @@ const ParticipatePage = () => {
         </div>
       </section>
 
-      <section className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-6 mx-auto max-w-screen-xl">
+      <section id="JoinUs" className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-6 mx-auto max-w-screen-xl">
         <div className="text-black p-8">
           <div>
             <div className="text-center pb-8">

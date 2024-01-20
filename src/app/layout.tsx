@@ -16,9 +16,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const navItems = [
-    { name: "Accueil", href: "/accueil" },
+    { name: "Accueil", href: "/" },
     { name: "À Propos", href: "/AboutUs" },
-    { name: "Actualités", href: "/actualites" },
+    { name: "Actualités", href: "/participer" },
     { name: "Boutique", href: "/boutique" },
     // Add more items as needed
   ];

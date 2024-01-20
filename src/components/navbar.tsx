@@ -54,12 +54,17 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
               >
                 Faire un Don
               </Button>
-              <Button
-                variant="outline"
-                className="hover:bg-blue-300 bg-white hover:border-blue-300  text-blue-400 "
+              <Link 
+                key="Rejoignez-nous"
+                href="/participer#JoinUs"
               >
-                Rejoignez-nous
-              </Button>
+                <Button
+                  variant="outline"
+                  className="hover:bg-blue-300 bg-white hover:border-blue-300  text-blue-400 "
+                >
+                  Rejoignez-nous
+                </Button>
+              </Link>
             </div>
           </div>
         </nav>

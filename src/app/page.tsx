@@ -13,9 +13,9 @@ import TeamMembersPage from "./TeamMembersPage";
 export default function Home() {
   return (
     <main>
-      <HeroSection />
-      <AboutUsSection />
-      <NewsSection />
+    <HeroSection />
+     <AboutUsSection />
+      <NewsSection /> 
       <SponsorsSection />
     </main>
   );
