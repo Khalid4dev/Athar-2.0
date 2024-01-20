@@ -9,13 +9,12 @@ const TeamMembersPage: React.FC = () => {
         <div>
             <PageTitle title="Équipe Dirigeante et Membres Clés" />
             <section className='p-12'>
-                <h2 className="text-center text-3xl text-black font-bold p-8 mb-8">Notre Équipe</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mx-auto max-w-screen-xl px-24">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mx-auto max-w-screen-lg">
                     {[1, 2, 3, 4, 5, 6,7,8,9].map((index) => (
                         <div key={index} className="mb-8 hover:shadow-xl hover:scale-105 transition-transform">
                             <MemberCard
                                 picture={pfp.src}
-                                name="Houda HALIM"
+                                name="Khalid HALIM"
                                 job="Responsable formation et développement RH"
                                 email="john.doe@example.com"
                                 phoneNumber="123-456-7890"
