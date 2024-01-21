@@ -21,7 +21,7 @@ const HeroSection: React.FC = () => {
         <p className="text-sm sm:text-xl text-white mb-8">This is some text.</p>
         <Button
           variant="secondary"
-          className="bg-yellow-300 hover:bg-yellow-400"
+          className="bg-secondary-yellow hover:bg-yellow-400"
         >
           Faire un Don
         </Button>

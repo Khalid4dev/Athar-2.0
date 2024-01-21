@@ -186,43 +186,43 @@ const ParticipatePage = () => {
             </div>
             <div className="text-center mb-8">
               <h1 className="text-4xl font-bold mb-4 border-b border-gray-300 p-4">
-                Get in Touch With Us
+                Prenez Contact Avec Nous
               </h1>
-              <div className="flex justify-center items-center space-x-4 p-4">
+              <div className="flex justify-center items-center space-x-4 p-4 text-white">
                 <a
                   href="#facebook"
-                  className="border border-blue-600 p-2 rounded-xl hover:bg-blue-600 hover:text-white"
+                  className="border border-blue-600 p-2 bg-blue-600 "
                 >
                   <FontAwesomeIcon
                     icon={faFacebook}
-                    className="text-blue-600 text-lg"
+                    className="text-lg"
                   />
                 </a>
                 <a
                   href="#instagram"
-                  className="border border-pink-600 p-2 rounded-xl hover:bg-pink-600 hover:text-white"
+                  className="border border-pink-600 p-2 bg-pink-600"
                 >
                   <FontAwesomeIcon
                     icon={faInstagram}
-                    className="text-pink-600 text-lg"
+                    className="text-lg"
                   />
                 </a>
                 <a
                   href="#twitter"
-                  className="border border-blue-400 p-2 rounded-xl hover:bg-blue-400 hover:text-white"
+                  className="border border-blue-400 p-2 bg-blue-400"
                 >
                   <FontAwesomeIcon
                     icon={faTwitter}
-                    className="text-blue-400 text-lg"
+                    className="text-lg"
                   />
                 </a>
                 <a
                   href="#linkedin"
-                  className="border border-blue-500 p-2 rounded-xl hover:bg-blue-500 hover:text-white"
+                  className="border border-blue-500 p-2 bg-blue-500"
                 >
                   <FontAwesomeIcon
                     icon={faLinkedin}
-                    className="text-blue-500 text-lg"
+                    className="text-lg"
                   />
                 </a>
               </div>
@@ -381,7 +381,7 @@ const ParticipatePage = () => {
               </div>
             </div>
           </div>
-          <div className="bg-gray-200 grid grid-rows-1 sm:grid-rows-3 gap-2 pl-8 pr-8 pt-4 pb-4">
+          <div className="bg-blue-50 grid grid-rows-1 sm:grid-rows-3 gap-2 pl-8 pr-8 pt-4 pb-4">
             <div className="flex items-center">
               <div>
                 <Image

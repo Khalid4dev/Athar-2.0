@@ -73,7 +73,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
   return (
     <>
       <div className="top-4 z-10 w-full flex items-center justify-center px-4 md:px-8 lg:px-16 fixed">
-        <nav className="flex items-center justify-between p-4 bg-blue-200 backdrop-blur bg-opacity-60 text-white rounded-3xl mx-auto w-full max-w-screen-xl  ">
+        <nav className="flex items-center justify-between p-4 bg-primary-blue backdrop-blur bg-opacity-50 text-white rounded-3xl mx-auto w-full max-w-screen-xl  ">
           <div className="flex items-center flex-shrink-0">
             <Image
               width={40}
@@ -139,10 +139,10 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
               >
                 Faire un Don
               </Button>
-              <Link key="Rejoignez-nous" href="/participer#JoinUs">
+              <Link key="Rejoignez-nous" href="/Participate">
                 <Button
                   variant="outline"
-                  className="hover:bg-blue-300 bg-white hover:border-blue-300  text-blue-400 "
+                  className=" bg-primary-blue text-white hover:bg-blue-400 hover:border-white   "
                 >
                   Rejoignez-nous
                 </Button>
@@ -165,13 +165,13 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
             ))}
             <Button
               variant="secondary"
-              className="bg-yellow-300 hover:bg-yellow-400"
+              className="bg-secondary-yellow hover:bg-yellow-400"
             >
               Faire un Don
             </Button>
             <Button
               variant="outline"
-              className="hover:bg-blue-300 bg-white hover:border-blue-300  text-blue-400 "
+              className= "bg-white hover:bg-white"
             >
               Rejoignez-nous
             </Button>

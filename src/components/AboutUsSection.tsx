@@ -3,9 +3,9 @@ import Image from 'next/image';
 import aboutusimage from '../assets/images/aboutus.jpg';
 const AboutUsSection: React.FC = () => {
   return (
-    <div className="flex justify-center p-8 bg-blue-50">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-screen-xl">
-        <div>
+    <div className="flex justify-center p-8 bg-blue-50 pt-20 pb-20">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-screen-xl">
+        <div className='sm:col-span-2'>
           <div className="mb-8">
             <div className="text-2xl font-bold">Qui sommes-nous ?</div>
             <h3 className="text-uppercase">Athar Alkhair</h3>
@@ -32,13 +32,13 @@ const AboutUsSection: React.FC = () => {
           </div>
         </div>
         
-        <div className="flex items-center justify-end">
+        <div>
           <Image
             width="450"
             height="401"
             src={aboutusimage}
             alt=""
-            className="rounded-lg"
+            className="rounded-lg w-full"
           />
         </div>
       </div>
