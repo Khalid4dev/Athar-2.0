@@ -1,3 +1,4 @@
+import { Roboto } from "next/font/google"
 import type { Config } from "tailwindcss"
 
 const config = {
@@ -12,7 +13,8 @@ const config = {
   theme: {
     extend: {
       colors: {
-        "primary-blue": "#4AA4DB",
+        "primary-blue": "#3a8dbf",
+        "gradiant-blue": "#4AA4DB",
         "primary-grey": "#5D5D5D",
         "secondary-red": "#EF4A52",
         "secondary-yellow": "#F8C413",
@@ -53,6 +55,7 @@ const config = {
       fontFamily: {
         Arabota: ["Arabota", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
+        Roboto: ["Roboto", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
