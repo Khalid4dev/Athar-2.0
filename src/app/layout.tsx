@@ -30,6 +30,7 @@ export default function RootLayout({
       name: "Actualités",
       href: "/News",
     },
+    { name: "Evénements", href: "/Events"},
     { name: "Boutique", href: "/Boutique" },
   ];
 

@@ -1,4 +1,4 @@
-import { Roboto } from "next/font/google"
+import { Roboto, Montserrat } from "next/font/google"
 import type { Config } from "tailwindcss"
 
 const config = {
