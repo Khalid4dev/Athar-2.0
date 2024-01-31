@@ -20,7 +20,7 @@ interface NavbarProps {
 
 // ...
 
-function MenuItem({ item }) {
+function MenuItem({ item }: { item: NavItem }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
