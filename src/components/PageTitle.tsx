@@ -1,4 +1,4 @@
-import TitleImage from "../assets/images/title_background.jpeg";
+import TitleImage from "@/assets/images/header_bg.jpg";
 import Image from "next/image";
 
 type PageTitleProps = {
