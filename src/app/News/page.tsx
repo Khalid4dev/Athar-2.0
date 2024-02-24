@@ -32,7 +32,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
   return (
     <main>
       <PageTitle title="Actualités" />
-      <div className="container mx-auto flex flex-wrap py-6">
+      <div className="container mx-auto flex flex-wrap max-w-screen-xl py-6">
     <section className="w-full md:w-2/3 flex flex-col items-center px-3">
       <article className="flex flex-col shadow my-4">
         <a href="#" className="hover:opacity-75">

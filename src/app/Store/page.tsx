@@ -1,11 +1,19 @@
 import Image from "next/image";
 import PageTitle from "../../components/PageTitle";
 import Product from "@/components/Product";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   const products = [
     { id: 1, name: 'Product 1', image: 'https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80' },
     { id: 2, name: 'Product 2', image: 'https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80' },
+    { id: 3, name: 'Product 3', image: 'https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80' },
+    { id: 3, name: 'Product 3', image: 'https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80' },
+    { id: 3, name: 'Product 3', image: 'https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80' },
+    { id: 3, name: 'Product 3', image: 'https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80' },
+    { id: 3, name: 'Product 3', image: 'https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80' },
+    { id: 3, name: 'Product 3', image: 'https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80' },
     { id: 3, name: 'Product 3', image: 'https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80' },
     { id: 3, name: 'Product 3', image: 'https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80' },
     { id: 3, name: 'Product 3', image: 'https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80' },
@@ -47,6 +55,11 @@ export default function Home() {
             <Product key={product.id} {...product} />
           ))}
         </div>
+        <div className="flex items-center justify-center py-8">
+        <a href="#" className="h-10 w-10 bg-primary-blue hover:bg-gradiant-blue font-semibold text-white text-sm flex items-center justify-center">1</a>
+        <a href="#" className="h-10 w-10 font-semibold text-gray-800 hover:bg-gradiant-blue hover:text-white text-sm flex items-center justify-center">2</a>
+        <a href="#" className="h-10 w-10 font-semibold text-gray-800 hover:text-gray-900 text-sm flex items-center justify-center ml-2">Next<FontAwesomeIcon icon={faArrowRight} className="text-gray-800 pl-1"/></a>
+      </div>
       </section>
     </main>
   );

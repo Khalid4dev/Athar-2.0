@@ -38,7 +38,6 @@ export default function Home() {
               {
                 title: 'Meeting',
                 start: new Date(),
-                end: '2024-07-07T07:00:00',
                 url: 'http://google.com/',
               },
               {

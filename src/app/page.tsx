@@ -9,13 +9,11 @@ import NewsTemplate from "../components/newsTemplate";
 export default function Home() {
   return (
     <main>
-      {/* <HeroSection />
+      <HeroSection />
       <AboutUsSection />
       <NewsSection /> 
-      <SponsorsSection /> */}
-     
-
-      <NewsTemplate />
+      <SponsorsSection />
+      {/* <NewsTemplate /> */}
     </main>
   );
 }
